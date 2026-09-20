@@ -1,0 +1,9 @@
+# Local test material
+*.key
+*.img
+*.bak
+*.backup
+
+# Editor/OS files
+*~
+.DS_Store
