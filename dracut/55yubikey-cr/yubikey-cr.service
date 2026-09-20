@@ -1,0 +1,12 @@
+[Unit]
+Description=Generate YubiKey CR credential for root LUKS
+DefaultDependencies=no
+After=systemd-udevd.service
+
+# Installation must add a Before= line for the exact escaped
+# systemd-cryptsetup@<root-mapper>.service unit.
+Before=SYSTEMD_CRYPTSETUP_UNIT_REPLACE_ME
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/yubikey-cr-key
